@@ -22,6 +22,23 @@ public class prime {
         
  
 }
+static void near(int n){
+
+    for(int i=1;i<n;i++){
+        
+        if(isprm(n-i)){
+            System.out.println(n-i);
+            return;
+        }
+        else if( isprm(n+i)){
+            System.out.println(n+i);
+            return;
+        }
+       
+    }
+    System.out.println("no prime");
+    }
+
 
 static void twins(int n){
     for(int i=2;i<=n-2;i++){
@@ -38,18 +55,18 @@ static void twins(int n){
 
         int sum=0;
 
-        for(int i=2;i<=r;i++){
-            if(isprm(i)){
-                sum+=i;
-                System.out.println(i);
+       // for(int i=2;i<=r;i++){
+            //if(isprm(i)){
+             //   sum+=i;
+             //   System.out.println(i);
              
-            }
-        }
+           // }
+       // }
 
-        System.out.println("sums :"+sum);
+       // System.out.println("sums :"+sum);
 
-     twins(r);
-
+     //twins(r);
+near(r);
 
 
 
