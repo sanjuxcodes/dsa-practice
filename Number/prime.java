@@ -22,6 +22,14 @@ public class prime {
         
  
 }
+
+static void twins(int n){
+    for(int i=2;i<=n-2;i++){
+        if(isprm(i) && isprm(i+2)){
+            System.out.println(i + " "+(i+2));
+        }
+    }
+}
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
@@ -38,7 +46,9 @@ public class prime {
             }
         }
 
-        System.out.println(sum);
+        System.out.println("sums :"+sum);
+
+     twins(r);
 
 
 
