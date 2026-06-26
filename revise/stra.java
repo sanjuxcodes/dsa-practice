@@ -10,6 +10,7 @@ public class stra {
 
         if(mp.length()!=ip.length()){
             System.out.print("no");
+            return;
         }
 
 

@@ -30,6 +30,9 @@ public class doc {
            
 
         }
+        if(wt<0){
+            wt=0;
+        }
 
        System.out.print(wt);
         

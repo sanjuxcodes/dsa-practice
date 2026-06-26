@@ -42,23 +42,20 @@ public class mrg {
                 map.add(brr[j]);
                 j++;
             }
-            if(i==a){
-
-                while(j<b){
-                    map.add(brr[j]);
-                    j++;
-                }
-
-            }
-            if(j==b){
-                while(i<a){
-                    map.add(arr[i]);
-                    i++;
-                }
-
-            }
-
         }
+            
+            
+
+            while(j<b){
+                map.add(brr[j]);
+                j++;
+            }
+            while(i<a){
+                map.add(arr[i]);
+                i++;
+            }
+
+        
         System.out.print(map);
 
     }

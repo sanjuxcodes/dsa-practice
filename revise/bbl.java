@@ -15,23 +15,19 @@ public class bbl {
         for(int i=0;i<arr.length;i++){
 
         boolean swpd=false;
-            for(int j=0;j<arr.length-i-1;j++){
-                
 
-                if(arr[j]>arr[j+1]){
+        for(int j=0;j<arr.length-1-i;j++){
 
-                    swp(arr,j,j+1);
-                    swpd=true;
-
-
-
-                }
-            }
-                if(!swpd){
-                  break;
+            if(arr[j]>arr[j+1]){
+                swp(arr,j,j+1);
+                swpd=true;
                 
             }
-
+        }
+        if(!swpd){
+            break;
+        }
+         
         }
         for(int i : arr){
             System.out.print(i+" ");

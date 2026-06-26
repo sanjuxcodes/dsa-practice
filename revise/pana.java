@@ -6,7 +6,7 @@ public class pana {
         Scanner sc = new Scanner(System.in);
 
         String ip = sc.nextLine().toLowerCase();
-        String jp=ip.replaceAll("[^a-zA-Z] ","");
+        String jp=ip.replaceAll("[^a-zA-Z]","");
     
 
         int arr[]= new int[26];

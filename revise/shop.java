@@ -8,6 +8,8 @@ public class shop {
 
         int b=sc.nextInt();
 
+        
+
         int fs=(int)Math.pow(2,b);
 
         System.out.print(fs-i);

@@ -7,19 +7,27 @@ public class peakele {
 
         int arr[]= new int[n];
 
+
+
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
 
 
         }
+        if(n==1){
+            System.out.print(arr[0]);
+            return;
+        }
 
         if(arr[0]>arr[1]){
             System.out.print(arr[0]);
+            return;
 
 
         }
         if(arr[n-1]>arr[n-2]){
             System.out.print(arr[n-1]);
+            return;
 
         }
 
@@ -31,6 +39,7 @@ public class peakele {
 
             if(arr[mid]>arr[mid+1] && arr[mid]>arr[mid-1]){
                 System.out.print(arr[mid]);
+                return;
             }
             if(arr[mid]>arr[mid-1]){
                 l=mid+1;

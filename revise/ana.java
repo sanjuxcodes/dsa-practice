@@ -4,7 +4,7 @@ public class ana {
 
         Scanner sc = new Scanner(System.in);
 
-        String ip= sc.nextLine().toLowerCase().replaceAll("[^a-zA-Z] ","");
+        String ip= sc.nextLine().toLowerCase().replaceAll("[^a-zA-Z]","");
 
         String ipp= sc.nextLine().toLowerCase().replaceAll("[^a-zA-Z]","");
 

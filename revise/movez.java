@@ -23,7 +23,7 @@ public class movez {
 
 
         }
-        for(int i=j+1;i<n;i++){
+        for(int i=j;i<n;i++){
 
             arr[i]=0;
 

@@ -17,18 +17,28 @@ public class longsqnc {
             set.add(sc.nextInt());
 
         }
-        ArrayList<Integer> list = new ArrayList<>(set);
+      
+        int c=1;
+        int mc=1;
+        for(int x: set){
 
-        
-        Collections.sort(list);
-        int c=0;
-        for(int i=1;i<list.size();i++){
-            if(list.get(i)-list.get(i-1)==1){
+            int y=x;
+            
+
+            while(set.contains(y+1)){
                 c++;
+                y++;
+                
             }
+            mc=Math.max(mc,c);
+            c=1;
+           
         }
 
-        System.out.print(c);
+        System.out.print(mc);
+
+      
+
 
 
 

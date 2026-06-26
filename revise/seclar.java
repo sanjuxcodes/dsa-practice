@@ -5,28 +5,34 @@ public class seclar {
         Scanner sc = new Scanner(System.in);
 
 
+        int n=sc.nextInt();
 
-        String ip = sc.nextLine().replaceAll(" ","");
 
-        char ch= ip.charAt(ip.length()-1);
 
+
+        int arr[]= new int[n];
         
 
-        for(int i =1;i<ip.length();i++){
-
-            if(ip.charAt(i) !=ip.charAt(i-1)){
-                System.out.print( ip.charAt(i-1));
-
-
-
-
-            }
-            
-            
-
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
 
         }
-        System.out.print(ch);
+
+        int x= arr[n-1];
+
+
+        for(int i =1;i<n;i++){
+            if(arr[i]!=arr[i-1]){
+                System.out.print(arr[i-1]);
+            }
+        }
+        System.out.print(x);
+
+
+
+
+
+       
         
 
 

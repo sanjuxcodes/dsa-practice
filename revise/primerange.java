@@ -36,6 +36,18 @@ public class primerange {
 
 
     }
+    static int near(int a){
+        for(int i=1;i<=a;i++){
+            if(isprime(a-i)){
+                return a-i;
+            }
+            if(isprime(a+i)){
+                return a+i;
+            }
+        }
+        return -1;
+    }
+
 
     public static void main(String[] args){
 

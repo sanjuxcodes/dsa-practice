@@ -16,6 +16,10 @@ public class selec {
 
             for(int j=i+1;j<n;j++){
 
+                //kry: here have to find the min wrt to the assumed min ele as our very frst ele -> 
+                //  at each iteration with the inner loop have to find the min and swap it with the frst indx.
+
+
                 if(arr[j]<arr[min]){
                     min=j;
 
