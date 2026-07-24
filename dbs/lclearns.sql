@@ -22,3 +22,19 @@ FROM (
 ) t
 ORDER BY no_order DESC -- just sorted the freq
 LIMIT 1;
+
+
+-- lc 607
+-- join as a sub query
+-- always use primary key to filter in this types of qus
+
+select s.name from SalesPerson s
+ where s.sales_id not in
+(
+select s.sales_id from SalesPerson s
+left join Orders o
+on s.sales_id=o.sales_id
+
+join Company c
+on o.com_id=c.com_id
+and c.name ='RED' );
