@@ -38,3 +38,27 @@ on s.sales_id=o.sales_id
 join Company c
 on o.com_id=c.com_id
 and c.name ='RED' );
+
+
+-- valid taringle 
+# Write your MySQL query statement below
+
+select x , y, z ,
+
+case
+    when x+y <= z then 'No'
+    when x+z <= y then 'No'
+    when z+y <= x then 'No'
+else 'Yes'
+end as triangle from Triangle ;
+
+
+-- lc 619: low freq and high as value
+
+# Write your MySQL query statement below
+
+
+select max(num) as num from(
+    -- for frq  use count and group by
+select num , count(num) as freq from Mynumbers group by num) t
+where freq=1 ;
