@@ -62,3 +62,14 @@ select max(num) as num from(
     -- for frq  use count and group by
 select num , count(num) as freq from Mynumbers group by num) t
 where freq=1 ;
+
+
+
+-- update based on condition or swap gender types:
+
+update Salary
+set sex=
+case
+    when sex='m' then 'f'
+    else 'm'
+end;
