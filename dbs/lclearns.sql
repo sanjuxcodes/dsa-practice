@@ -83,3 +83,14 @@ end;
                                                     -- here see used key word rank as col name but with " "
 select score, DENSE_RANK() OVER(ORDER BY score DESC) as 'rank' from Scores;
 
+-- 2nd hgst salary ->(my concept is right bt)
+-- here we have to handle one row test cases where no 2nd salary exists and also with multiple duplicate 2nd hght salary ->
+
+
+# Write your MySQL query statement below
+select ifnull(
+(select distinct salary from(
+    select 
+    salary, dense_rank() over(order by salary desc ) as rnk from Employee
+) t 
+where rnk=2),null)as SecondHighestSalary ;
