@@ -73,3 +73,13 @@ case
     when sex='m' then 'f'
     else 'm'
 end;
+
+
+-- lc 178 ->
+-- use of window function
+-- give rank without skip (DENSE_RANK):
+
+# Write your MySQL query statement below
+                                                    -- here see used key word rank as col name but with " "
+select score, DENSE_RANK() OVER(ORDER BY score DESC) as 'rank' from Scores;
+
