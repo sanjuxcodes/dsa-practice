@@ -94,3 +94,10 @@ select ifnull(
     salary, dense_rank() over(order by salary desc ) as rnk from Employee
 ) t 
 where rnk=2),null)as SecondHighestSalary ;
+
+
+-- lc 1693
+-- group on multiple colmn 
+# Write your MySQL query statement below
+select date_id , make_name , count(distinct lead_id) as unique_leads, count(distinct partner_id) 
+as unique_partners from DailySales group by make_name,date_id;
