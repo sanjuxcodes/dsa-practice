@@ -101,3 +101,13 @@ where rnk=2),null)as SecondHighestSalary ;
 # Write your MySQL query statement below
 select date_id , make_name , count(distinct lead_id) as unique_leads, count(distinct partner_id) 
 as unique_partners from DailySales group by make_name,date_id;
+
+
+-- lc 180 : use lead , lag  window functions as sub qry
+# Write your MySQL query statement below
+select distinct num as ConsecutiveNums from 
+(select
+num,
+ lead(num,1) over(order by id) as nu,
+  lag(num,1) over(order by id) as n2 from Logs ) t
+   where num=nu and num=n2;
