@@ -123,3 +123,12 @@ case
     when id%2=1 then coalesce(lead(student,1) over(order by id) ,student)
     when id%2=0 then lag(student,1) over(order by id)
 end as student from Seat;
+
+
+-- when sub qry need to return multiple row use 'in' instead of '='
+
+# Write your MySQL query statement below
+select name from Employee where id in(
+select  
+managerId as id from Employee 
+group by managerId having  count(managerId) >=5 );
