@@ -111,3 +111,15 @@ num,
  lead(num,1) over(order by id) as nu,
   lag(num,1) over(order by id) as n2 from Logs ) t
    where num=nu and num=n2;
+
+
+
+-- swap with adj seats ..if last dont swap 
+-- see the usage of Coalesce function with Window functions along with case 
+
+# Write your MySQL query statement below
+select id , 
+case 
+    when id%2=1 then coalesce(lead(student,1) over(order by id) ,student)
+    when id%2=0 then lag(student,1) over(order by id)
+end as student from Seat;
