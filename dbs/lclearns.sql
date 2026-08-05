@@ -132,3 +132,15 @@ select name from Employee where id in(
 select  
 managerId as id from Employee 
 group by managerId having  count(managerId) >=5 );
+
+
+
+-- when we have to join 2 tbls and instructed to show null if some values are missing or not matching 
+-- dont use INNER JOIN
+-- use left join
+-- lc 1378
+
+# Write your MySQL query statement below
+select u.unique_id as unique_id,e.name from Employees e
+left join EmployeeUNI u 
+on u.id=e.id;
