@@ -144,3 +144,9 @@ group by managerId having  count(managerId) >=5 );
 select u.unique_id as unique_id,e.name from Employees e
 left join EmployeeUNI u 
 on u.id=e.id;
+
+
+-- lc 1484
+-- when have to group any ele of a column wrt any condition (date) use GROUP_CONCAT(colmn name)
+# Write your MySQL query statement below
+select sell_date , count( distinct product) as num_sold,group_concat( distinct product) as products  from Activities group by sell_date ;
