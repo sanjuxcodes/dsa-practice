@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+html,
+body{
+    height: 100%;
+    background-image: url("ele1.jpeg");
+    background-size: cover;      /* Fill the screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+}
+
+.box{
+
+    height: 200px;
+    width: 400px;
+    font-family :gilson; 
+    
+    margin-top:100px;
+    margin-left:80px;
+    padding-left:50px;
+
+    padding-top: 40px;
+    
+
+    border-radius: 30px;
+    color: hsl(0, 0%, 87%);
+    background-color:rgb(225, 114, 203);
+}
+.box:hover{
+    color:rgb(0, 0, 0);
+    background-color:rgb(125, 246, 178);
+}
