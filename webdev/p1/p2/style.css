@@ -35,3 +35,20 @@ body{
     color:rgb(0, 0, 0);
     background-color:rgb(125, 246, 178);
 }
+#light{
+    height:100px;
+    width:100px;
+    margin-left:1200px;
+    background-color:white;
+
+    border-radius:70%;
+
+}
+#btn{
+    height:30px;
+    width:90px;
+    margin-top:40px;
+    margin-left:1210px;
+    background-color:white;
+
+}
