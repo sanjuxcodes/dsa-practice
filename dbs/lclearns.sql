@@ -150,3 +150,10 @@ on u.id=e.id;
 -- when have to group any ele of a column wrt any condition (date) use GROUP_CONCAT(colmn name)
 # Write your MySQL query statement below
 select sell_date , count( distinct product) as num_sold,group_concat( distinct product) as products  from Activities group by sell_date ;
+
+
+-- lc 1890
+-- when need of latest date of any year just use MAX() with date and also order by desc to sort 
+# Write your MySQL query statement below
+select user_id , max(time_stamp) as last_stamp from Logins
+where year(time_stamp)='2020' group by user_id order by Month(time_stamp) desc;
