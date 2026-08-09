@@ -18,3 +18,23 @@ union all
 select accepter_id from RequestAccepted)t 
  group by id 
  order by num desc limit 1;
+
+
+ -- lc 1965
+ -- finding missing info from 2 relational tbl
+
+ # Write your MySQL query statement below
+
+select employee_id from Employees 
+where employee_id not in (SELECT employee_id
+    FROM Salaries)
+
+union
+
+select employee_id from Salaries
+where employee_id not in (SELECT employee_id
+    FROM employees) 
+order by employee_id;
+
+
+
