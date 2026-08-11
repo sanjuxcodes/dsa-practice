@@ -157,3 +157,15 @@ select sell_date , count( distinct product) as num_sold,group_concat( distinct p
 # Write your MySQL query statement below
 select user_id , max(time_stamp) as last_stamp from Logins
 where year(time_stamp)='2020' group by user_id order by Month(time_stamp) desc;
+
+
+-- lc 1633
+-- calc percentage from 2 diff tbl
+
+# Write your MySQL query statement below
+
+select contest_id ,
+ round((count(distinct r.user_id)/count(distinct u.user_id))*100,2) 
+ as percentage from Register r ,Users u 
+group by contest_id 
+order by percentage desc ,contest_id asc;
