@@ -1,0 +1,12 @@
+.box{
+    height:100px;
+    width:100px;
+    border: 2px solid rgb(77, 144, 137);
+
+    margin:10px;
+    text-align:center;
+
+    background-color:yellow;
+
+
+}
