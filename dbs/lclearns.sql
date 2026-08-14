@@ -169,3 +169,11 @@ select contest_id ,
  as percentage from Register r ,Users u 
 group by contest_id 
 order by percentage desc ,contest_id asc;
+
+
+-- lc 3793 
+-- get at least one who have more token than its avg 
+# Write your MySQL query statement below
+
+select user_id, count(*) as prompt_count , round(avg(tokens),2) as avg_tokens from prompts 
+group by user_id having count(*) >=3 and max(tokens)>avg(tokens) order by avg_tokens desc, user_id asc;
