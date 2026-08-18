@@ -177,3 +177,20 @@ order by percentage desc ,contest_id asc;
 
 select user_id, count(*) as prompt_count , round(avg(tokens),2) as avg_tokens from prompts 
 group by user_id having count(*) >=3 and max(tokens)>avg(tokens) order by avg_tokens desc, user_id asc;
+
+
+-- lc 3220
+-- conditional logic - case when then + aggregate function 
+# Write your MySQL query statement below
+select transaction_date, 
+sum(case
+when amount % 2!=0 then amount
+else 0
+end )
+as odd_sum ,
+sum(
+case 
+when amount %2=0 then amount
+else 0
+end) as even_sum
+from transactions group by transaction_date order by transaction_date asc;
