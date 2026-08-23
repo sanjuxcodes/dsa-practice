@@ -194,3 +194,23 @@ when amount %2=0 then amount
 else 0
 end) as even_sum
 from transactions group by transaction_date order by transaction_date asc;
+
+
+-- selective count lc 1934
+-- +1 if confirmed and 0 if not
+
+# Write your MySQL query statement below
+select s.user_id , 
+
+round(ifnull(sum(case
+ when action='confirmed' then 1
+ else 0
+ end )/count(c.action)
+ ,0.00)
+ ,2) as confirmation_rate 
+ from Signups s
+ left join Confirmations c
+ on s.user_id=c.user_id
+ 
+ group by user_id
+ order by confirmation_rate asc ;
