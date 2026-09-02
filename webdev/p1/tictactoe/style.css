@@ -69,3 +69,16 @@ h1 {
     background-color: #f1bc66;
     transform: scale(1.03);
 }
+#wnmsg{
+
+    color: rgb(224, 196, 196);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  
+
+    font-family: Arial, sans-serif;
+}

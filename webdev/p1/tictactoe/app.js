@@ -1,6 +1,7 @@
 let box= document.querySelectorAll(".btn");
 
 let rest= document.querySelector(".reset");
+let msg= document.querySelector("#wnmsg");
 
 var turn =true;
 
@@ -16,6 +17,33 @@ let winningPatterns = [
     [0, 4, 8],  // diagonal
     [2, 4, 6]   // diagonal
 ];
+const showwnr = (winner)=>{
+    msg.innerText=`congooooo , winner is : ${winner}`;
+    
+    }
+    
+let checkwinner = ()=>{
+
+    for(let ptrn of winningPatterns){
+        let p1=box[ptrn[0]].innerText;
+        let p2=box[ptrn[1]].innerText;
+        let p3=box[ptrn[2]].innerText;
+
+        if(p1!="" && p2 !="" && p3 !=""){
+            if(p1===p2 && p2===p3){
+                showwnr(p1);
+
+                box.forEach((btn)=>{
+                    btn.disabled=true;
+
+                });
+            }
+        }
+    }
+    
+
+}
+
 
 box.forEach((btn)=>{
     btn.addEventListener("click",()=>{
@@ -35,18 +63,15 @@ box.forEach((btn)=>{
 
 
         btn.disabled=true;
+        checkwinner();
 
 
         
     })
 
-    checkwinner();
+  
 
 })
 
 
 
-let checkwinner = ()=>{
-    
-
-}
